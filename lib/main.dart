@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class SnakeGame extends StatefulWidget {
-  const SnakeGame({Key? key}) : super(key: key);
+  const SnakeGame({super.key});
 
   @override
   _SnakeGameState createState() => _SnakeGameState();
@@ -98,7 +98,7 @@ class _SnakeGameState extends State<SnakeGame> {
         builder: (BuildContext context) {
           return AlertDialog(
             title: const Text('Game Over'),
-            content: Text('your score is ' + snakePosition.length.toString()),
+            content: Text('your score is ${snakePosition.length}'),
             actions: [
               TextButton(
                   onPressed: () {
@@ -162,7 +162,7 @@ class _SnakeGameState extends State<SnakeGame> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(224, 247, 245, 225),
+      backgroundColor: const Color.fromARGB(224, 247, 245, 225),
       body: Column(
         children: [
           Expanded(
@@ -200,7 +200,7 @@ class _SnakeGameState extends State<SnakeGame> {
                             padding: const EdgeInsets.all(2),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 radius: 7,
                                 backgroundColor:
                                     Color.fromARGB(255, 15, 92, 28),
@@ -234,7 +234,7 @@ class _SnakeGameState extends State<SnakeGame> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                         color: x1
-                            ? Color.fromARGB(255, 153, 248, 153)
+                            ? const Color.fromARGB(255, 153, 248, 153)
                             : Colors.transparent,
                       ),
                       margin: const EdgeInsets.all(10),
@@ -258,7 +258,7 @@ class _SnakeGameState extends State<SnakeGame> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                         color: x2
-                            ? Color.fromARGB(255, 147, 241, 147)
+                            ? const Color.fromARGB(255, 147, 241, 147)
                             : Colors.transparent,
                       ),
                       margin: const EdgeInsets.all(10),
@@ -282,7 +282,7 @@ class _SnakeGameState extends State<SnakeGame> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                         color: x3
-                            ? Color.fromARGB(255, 174, 244, 174)
+                            ? const Color.fromARGB(255, 174, 244, 174)
                             : Colors.transparent,
                       ),
                       margin: const EdgeInsets.all(10),
